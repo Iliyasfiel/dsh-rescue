@@ -1,0 +1,9 @@
+# dsh bundle patch: inserts the dsh-rescue entry into a profile's layer stack.
+#
+# The entry is deliberately inert (see lib/index.js): dsh-rescue's real work
+# happens at the launcher level via `bin/dsh-rescue`, which stays usable even
+# when the GUI cannot boot. Declaring a loadable entry here is what makes the
+# package installable with `dsh plugin add` and boot-compatible.
+- insert:
+    - id: dsh-rescue
+      name: 'dsh-rescue'

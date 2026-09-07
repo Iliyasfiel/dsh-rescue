@@ -1,0 +1,53 @@
+{
+  "name": "dsh-rescue",
+  "version": "0.1.0",
+  "description": "Rescue mode for DeepSeek Harness: temporarily strip all third-party plugins from a profile's bundle stack so dsh can boot on a pure core and repair itself, then restore with one command.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./core": "./lib/rescue-core.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-rescue": "bin/dsh-rescue.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/rescue-core.test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "author": "Iliyasfiel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iliyasfiel/dsh-rescue.git"
+  },
+  "homepage": "https://github.com/Iliyasfiel/dsh-rescue#readme",
+  "bugs": {
+    "url": "https://github.com/Iliyasfiel/dsh-rescue/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "rescue",
+    "safe-mode",
+    "plugin-conflict",
+    "recovery"
+  ],
+  "license": "MIT"
+}
