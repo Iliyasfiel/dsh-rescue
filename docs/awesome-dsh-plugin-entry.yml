@@ -1,0 +1,9 @@
+# awesome-dsh-plugin 投稿条目(仓库创建满 1 天后提交)
+# fork https://github.com/awesome-dsh-plugin/awesome-dsh-plugin,
+# 将本文件内容存为 data/plugins/Iliyasfiel__dsh-rescue.yml 并开 PR。
+url: https://github.com/Iliyasfiel/dsh-rescue
+name: Iliyasfiel/dsh-rescue
+category: usage
+description:
+  en: 'Rescue mode for DeepSeek Harness: temporarily disable all third-party profile plugins so a conflict-broken harness can boot on a pure core and repair itself. CLI enter/exit/status plus an inert dsh.bundle entry.'
+  zh: 'dsh 救援模式:临时摘除 profile 中全部第三方插件,让因冲突无法启动的 harness 以纯核心启动并自我修复;提供 enter/exit/status 命令与 dsh.bundle 入口。'
